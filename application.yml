@@ -1,0 +1,38 @@
+com:
+  javabeans:
+    config:
+      service:
+        name: CONFIG-SERVICE
+        port: 8900
+    api:
+      gateway:
+        service:
+          name: API-GATEWAY
+          port: 8090
+    customer:
+      service:
+        context-path: /customer-service
+        name: CUSTOMER-SERVICE
+        port: 9090
+    product:
+      service:
+        context-path: /product-service
+        name: PRODUCT-SERVICE
+        port: 9091
+    order:
+      service:
+        context-path: /order-service
+        name: ORDER-SERVICE
+        port: 9092
+
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+
